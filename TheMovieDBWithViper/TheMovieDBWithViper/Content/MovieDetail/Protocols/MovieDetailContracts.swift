@@ -12,6 +12,7 @@ final class MovieDetailPresentation {
     private let movie: Movie
     var title: String { movie.title }
     var overview: String { movie.overview }
+    var voteAverage: String { String(movie.voteAverage) }
     var releaseDateText: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"

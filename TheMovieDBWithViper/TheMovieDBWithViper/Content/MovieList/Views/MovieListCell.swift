@@ -12,6 +12,7 @@ final class MovieListCell: BaseCollectionCell {
     @IBOutlet private weak var imageViewPoster: UIImageView!
     @IBOutlet private weak var viewTitleBackground: UIView!
     @IBOutlet private weak var labelTitle: UILabel!
+    @IBOutlet private weak var labelVoteAverage: UILabel!
     // MARK: - Properties
     var movie: MoviePresentation? {
         didSet {
@@ -31,11 +32,13 @@ final class MovieListCell: BaseCollectionCell {
             return
         }
         labelTitle.text = movie.title
+        labelVoteAverage.text = movie.voteAverage
         imageViewPoster.loadFrom(url: movie.posterUrl)
     }
     override func prepareForReuse() {
         super.prepareForReuse()
         labelTitle.text = nil
+        labelVoteAverage.text = nil
         imageViewPoster.image = nil
     }
 }

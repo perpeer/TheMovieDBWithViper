@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHZ-hF-cXI">
                         <rect key="frame" x="0.0" y="350" width="297" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fantastic Beasts: The Secrets of Dumbledore" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNv-IK-ZKM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fantastic Beasts: The Secrets of Dumbledore" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNv-IK-ZKM">
                                 <rect key="frame" x="4" y="2" width="289" height="46"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,21 +37,49 @@
                             <constraint firstItem="NNv-IK-ZKM" firstAttribute="top" secondItem="wHZ-hF-cXI" secondAttribute="top" constant="2" id="pb6-3d-N7C"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G82-Nv-8eK">
+                        <rect key="frame" x="253" y="8" width="36" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnP-Qy-9J1">
+                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dnP-Qy-9J1" secondAttribute="bottom" id="7p1-6i-M6q"/>
+                            <constraint firstItem="dnP-Qy-9J1" firstAttribute="leading" secondItem="G82-Nv-8eK" secondAttribute="leading" id="CpY-kK-97b"/>
+                            <constraint firstItem="dnP-Qy-9J1" firstAttribute="top" secondItem="G82-Nv-8eK" secondAttribute="top" id="PAY-aA-DQe"/>
+                            <constraint firstAttribute="width" constant="36" id="V2p-p7-GAe"/>
+                            <constraint firstAttribute="height" constant="36" id="Za7-cc-IYE"/>
+                            <constraint firstAttribute="trailing" secondItem="dnP-Qy-9J1" secondAttribute="trailing" id="rpo-c0-66h"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="wHZ-hF-cXI" secondAttribute="trailing" id="BKL-s5-QV3"/>
                 <constraint firstAttribute="trailing" secondItem="U07-jg-Isb" secondAttribute="trailing" id="GJl-53-uFB"/>
                 <constraint firstItem="wHZ-hF-cXI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PDR-rf-030"/>
+                <constraint firstAttribute="trailing" secondItem="G82-Nv-8eK" secondAttribute="trailing" constant="8" id="PoM-pv-aw7"/>
                 <constraint firstAttribute="bottom" secondItem="U07-jg-Isb" secondAttribute="bottom" id="SZ4-xb-1gW"/>
                 <constraint firstItem="U07-jg-Isb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="VTn-mh-Nm4"/>
                 <constraint firstAttribute="bottom" secondItem="wHZ-hF-cXI" secondAttribute="bottom" id="pAl-tk-jfs"/>
                 <constraint firstItem="U07-jg-Isb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rsV-ME-dn7"/>
+                <constraint firstItem="G82-Nv-8eK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="suO-hD-b4w"/>
             </constraints>
             <size key="customSize" width="297" height="400"/>
             <connections>
                 <outlet property="imageViewPoster" destination="U07-jg-Isb" id="UMW-uj-fu4"/>
                 <outlet property="labelTitle" destination="NNv-IK-ZKM" id="8zH-yZ-eAl"/>
+                <outlet property="labelVoteAverage" destination="dnP-Qy-9J1" id="gal-3I-Lb7"/>
                 <outlet property="viewTitleBackground" destination="wHZ-hF-cXI" id="CH6-YR-1Uk"/>
             </connections>
             <point key="canvasLocation" x="310.86956521739131" y="72.991071428571431"/>

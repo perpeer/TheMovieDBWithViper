@@ -12,6 +12,7 @@ import struct NetworkLayer.Movie
 final class MoviePresentation {
     private let movie: Movie
     var title: String { movie.title }
+    var voteAverage: String { String(movie.voteAverage) }
     var posterUrl: URL? {
         URL(string: "https://image.tmdb.org/t/p/w400\(movie.posterPath)")
     }

@@ -22,7 +22,7 @@ final class MovieListPresenter: MovieListPresenterProtocol {
     }
     
     func load() {
-        view.handleOutput(.updateTitle("Movies"))
+        view.handleOutput(.updateTitle("Popular Movies"))
         interactor.load()
     }
     

@@ -14,6 +14,7 @@ final class MovieDetailVC: BaseVC {
     @IBOutlet private weak var labelReleaseDateText: UILabel!
     @IBOutlet private weak var labelTitle: UILabel!
     @IBOutlet private weak var labelOverviewText: UILabel!
+    @IBOutlet private weak var labelVoteAverage: UILabel!
     // MARK: - Properties
     var presenter: MovieDetailPresenterProtocol!
     // MARK: - Override Functions
@@ -26,6 +27,7 @@ final class MovieDetailVC: BaseVC {
 extension MovieDetailVC: MovieDetailViewProtocol {
     func update(_ presentation: MovieDetailPresentation) {
         labelTitle.text = presentation.title
+        labelVoteAverage.text = presentation.voteAverage
         labelOverviewText.text = presentation.overview
         labelReleaseDateText.text = presentation.releaseDateText
         imageViewPoster.loadFrom(url: presentation.posterUrl)
