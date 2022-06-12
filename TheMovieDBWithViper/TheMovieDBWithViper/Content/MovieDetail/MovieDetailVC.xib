@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailVC" customModule="TheMovieDBWithViper" customModuleProvider="target">
+            <connections>
+                <outlet property="imageViewPoster" destination="71I-jE-QUf" id="fny-vQ-TW2"/>
+                <outlet property="labelOverviewText" destination="mZ5-Tw-375" id="ewc-RA-apS"/>
+                <outlet property="labelReleaseDateText" destination="5TC-FI-rVB" id="GsW-dF-4tC"/>
+                <outlet property="labelTitle" destination="7BO-gT-Ftw" id="zVQ-hI-f4A"/>
+                <outlet property="stackViewContainer" destination="g2U-2j-Bf8" id="2C5-0a-Up5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="JVQ-OL-cSL">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYR-SN-Qbg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="941"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9ss-E6-ELG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="941"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="71I-jE-QUf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="71I-jE-QUf" secondAttribute="height" multiplier="1:1.5" id="Gei-eN-R8X"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-2j-Bf8">
+                                            <rect key="frame" x="0.0" y="631" width="414" height="310"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-04-06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TC-FI-rVB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fantastic Beasts: The Secrets of Dumbledore" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BO-gT-Ftw">
+                                                    <rect key="frame" x="0.0" y="36.5" width="414" height="73.5"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="32"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ5-Tw-375">
+                                                    <rect key="frame" x="0.0" y="128" width="414" height="182"/>
+                                                    <string key="text">Professor Albus Dumbledore knows the powerful, dark wizard Gellert Grindelwald is moving to seize control of the wizarding world. Unable to stop him alone, he entrusts magizoologist Newt Scamander to lead an intrepid team of wizards and witches. They soon encounter an array of old and new beasts as they clash with Grindelwald's growing legion of followers.</string>
+                                                    <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="9ss-E6-ELG" firstAttribute="top" secondItem="MYR-SN-Qbg" secondAttribute="top" id="EFZ-K3-T1C"/>
+                                <constraint firstAttribute="bottom" secondItem="9ss-E6-ELG" secondAttribute="bottom" id="IM8-Em-tLT"/>
+                                <constraint firstAttribute="trailing" secondItem="9ss-E6-ELG" secondAttribute="trailing" id="u4x-7v-Z3f"/>
+                                <constraint firstItem="9ss-E6-ELG" firstAttribute="leading" secondItem="MYR-SN-Qbg" secondAttribute="leading" id="yMZ-VV-CyD"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MYR-SN-Qbg" firstAttribute="width" secondItem="JVQ-OL-cSL" secondAttribute="width" id="MfB-aT-Jca"/>
+                        <constraint firstAttribute="trailing" secondItem="MYR-SN-Qbg" secondAttribute="trailing" id="RVu-At-Q45"/>
+                        <constraint firstAttribute="bottom" secondItem="MYR-SN-Qbg" secondAttribute="bottom" id="a41-BE-RzU"/>
+                        <constraint firstItem="MYR-SN-Qbg" firstAttribute="top" secondItem="JVQ-OL-cSL" secondAttribute="top" id="vdm-ur-7Hs"/>
+                        <constraint firstItem="MYR-SN-Qbg" firstAttribute="leading" secondItem="JVQ-OL-cSL" secondAttribute="leading" id="xeW-7F-9bZ"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="f9h-Qp-kdd"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="JVQ-OL-cSL" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="ChU-uS-6f6"/>
+                <constraint firstItem="JVQ-OL-cSL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RIe-DM-OKF"/>
+                <constraint firstAttribute="bottom" secondItem="JVQ-OL-cSL" secondAttribute="bottom" id="iKv-Ql-pnw"/>
+                <constraint firstItem="JVQ-OL-cSL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uWl-iY-IO0"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
